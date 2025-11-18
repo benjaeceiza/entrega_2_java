@@ -13,13 +13,17 @@ public class App {
         Materia m3 = new Materia("Historia Argentina", profesor3, 8.00);
 
         estudiante1.setMateriaAlInicio(m1);
-        estudiante1.setMateriaAlInicio(m2);
+        estudiante1.setMateriaAlFinal(m3);
+        estudiante1.setMateriaAlMedio(m2,m1);
+
+        System.out.println("\nMaterias alumno: ");
+        estudiante1.mostrarMaterias();
+     
 
         estudiante2.setMateriaAlInicio(m1);
         estudiante2.setMateriaAlInicio(m3);
 
-        // System.out.println("Pomedio: " + estudiante2.calcularPromedioRecursivo(null,
-        // 0, 0));
+
 
         // CREAMOS LA LISTA UNIVERSIDAD
         Universidad listaMiembros = new Universidad();

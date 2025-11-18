@@ -58,7 +58,6 @@ public class Universidad {
     public ListaEnlazadaMiembros convertirALista(Persona encontrado){
         return this.miembros.convertirArrayALista(encontrado);
 
-
     }
 
 }

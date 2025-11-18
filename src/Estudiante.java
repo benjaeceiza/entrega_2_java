@@ -22,6 +22,12 @@ public class Estudiante extends Persona implements MiembroUniversidad {
     public void setMateriaAlInicio(Materia materia) {
         this.materias.agregarAlInicio(materia);
     }
+    public void setMateriaAlMedio(Materia materia, Materia materiaAnterior) {
+        this.materias.agregarMiembroAlMedio(materia,materiaAnterior);
+    }
+    public void setMateriaAlFinal(Materia materia) {
+        this.materias.agregarMiembroAlFinal(materia);
+    }
 
     public String getCarrera() {
         return carrera;
@@ -39,6 +45,7 @@ public class Estudiante extends Persona implements MiembroUniversidad {
         this.materias.imprimirMaterias();
     }
 
+
     @Override
     public void obtenerRol() {
 
@@ -53,9 +60,9 @@ public class Estudiante extends Persona implements MiembroUniversidad {
         this.materias.imprimirMaterias();
     }
 
-    // // METODOS RECURSIVOS E ITERATIVOS
 
-    // // PROMEDIOS
+
+    //PROMEDIOS (incompleto)
 
     public static double calcularPromedioRecursivo(NodoMateria actual, int contador, double suma) {
         if (actual == null) {

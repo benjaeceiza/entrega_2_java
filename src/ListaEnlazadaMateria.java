@@ -49,9 +49,9 @@ public class ListaEnlazadaMateria {
         }
     }
 
-   public void agregarMiembroAlFinal(Materia miembro) {
+   public void agregarMiembroAlFinal(Materia materia) {
 
-        NodoMateria nuevoNodo = new NodoMateria(miembro);
+        NodoMateria nuevoNodo = new NodoMateria(materia);
         if (this.inicio == null) {
             this.inicio = nuevoNodo;
         } else {
@@ -66,9 +66,9 @@ public class ListaEnlazadaMateria {
 
     }
 
-    public void agregarMiembroAlMedio(Materia miembro, Materia miembroAnterior) {
+    public void agregarMiembroAlMedio(Materia materia, Materia materiaAnterior) {
 
-        NodoMateria nuevoNodo = new NodoMateria(miembro);
+        NodoMateria nuevoNodo = new NodoMateria(materia);
 
         if (this.inicio == null) {
             this.inicio = nuevoNodo;
@@ -78,7 +78,7 @@ public class ListaEnlazadaMateria {
         NodoMateria actual = this.inicio;
         while (actual != null) {
 
-            if (actual.getDato().equals(miembroAnterior)) {
+            if (actual.getDato().equals(materiaAnterior)) {
 
                 nuevoNodo.setSiguiente(actual.getSiguiente());
 
