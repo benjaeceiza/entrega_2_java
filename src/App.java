@@ -12,18 +12,17 @@ public class App {
         Materia m2 = new Materia("Ciencias", profesor1, 8.00);
         Materia m3 = new Materia("Historia Argentina", profesor3, 8.00);
 
+        // ENVIAMOS CADA MATERIA A LA LISTA MATERIAS DE CADA ESTUDIANTE
         estudiante1.setMateriaAlInicio(m1);
         estudiante1.setMateriaAlFinal(m3);
-        estudiante1.setMateriaAlMedio(m2,m1);
+        estudiante1.setMateriaAlMedio(m2, m1);
 
+        // MOSTRAMOS SUS MATERIAS
         System.out.println("\nMaterias alumno: ");
         estudiante1.mostrarMaterias();
-     
 
         estudiante2.setMateriaAlInicio(m1);
         estudiante2.setMateriaAlInicio(m3);
-
-
 
         // CREAMOS LA LISTA UNIVERSIDAD
         Universidad listaMiembros = new Universidad();
@@ -39,9 +38,10 @@ public class App {
 
         listaMiembros.listarMiembros();
 
-        //MUESTRA RESULTADO DE BUSQUEDA BINARIA
-        ListaEnlazadaMiembros encontrado = listaMiembros.convertirALista(listaMiembros.busquedaBinariaMiembro("eceiza"));
-       
+        // MUESTRA RESULTADO DE BUSQUEDA BINARIA
+        ListaEnlazadaMiembros encontrado = listaMiembros
+                .convertirALista(listaMiembros.busquedaBinariaMiembro("eceiza"));
+
         System.out.println("\nPersona Econtrada!");
         encontrado.imprimirMiembros();
 
